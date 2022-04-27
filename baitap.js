@@ -35,19 +35,19 @@ document.getElementById("tinhTong").onclick = function() {
 }
 
 // Cách 2
-function sum(x, n) {
-    var x = document.getElementById("nhapSoX").value*1;
-    var n = document.getElementById("nhapSoN").value*1;
-    var result = 0;
-    for (var i = 1; i <= n; i++) {
-      result += x ** i;
-    }
-    return result;
-  }
-  document.getElementById("tinhTong").onclick = function() {
-    var result = sum();
-  document.getElementById("thongbao1").innerHTML = "Tổng là "+ result;
-  }
+// function sum(x, n) {
+//     var x = document.getElementById("nhapSoX").value*1;
+//     var n = document.getElementById("nhapSoN").value*1;
+//     var result = 0;
+//     for (var i = 1; i <= n; i++) {
+//       result += x ** i;
+//     }
+//     return result;
+//   }
+//   document.getElementById("tinhTong").onclick = function() {
+//     var result = sum();
+//   document.getElementById("thongbao1").innerHTML = "Tổng là "+ result;
+//   }
 
 
 /**
@@ -78,16 +78,32 @@ document.getElementById("tinhTongLuyThua").onclick = function() {
  */
 document.getElementById("xuat10Dong").onclick = function() {
     var nhap = document.getElementById("xuat10cau").value*1;
-    var ketqua = "";
+    var soChan = "";
+    var soLe = "";
     var i = 1;
     while( i <= nhap) {
         if(i % 2 == 0) {
-            ketqua += "<div> Số chẵn : " + i + "</div>";
+            soChan += "<div> Số chẵn : " + i + "</div>";
+            document.getElementById("thongbao3").style.backgroundColor= "red";
             i++;
         } else {
-            ketqua += "<div> Số lẻ : " + i + "</div>";
+            soLe += "<div> Số lẻ : " + i + "</div>";
+            document.getElementById("thongbao4").style.backgroundColor= "blue"
             i++;
         }
     }
-  document.getElementById("thongbao3").innerHTML = ketqua;
+  document.getElementById("thongbao3").innerHTML = soChan;
+  document.getElementById("thongbao4").innerHTML = soLe;
+}
+
+/**
+ * Bài tập 5
+ */
+document.getElementById("inso").onclick = function() {
+    var songuyen = document.getElementById("songuyen").value*1;
+    var result = "";
+    for(var i = 1; i < songuyen; i++) {
+        result += i + " ";
+    }
+    document.getElementById("thongbao5").innerHTML = result;
 }
