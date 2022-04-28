@@ -78,22 +78,18 @@ document.getElementById("tinhTongLuyThua").onclick = function() {
  */
 document.getElementById("xuat10Dong").onclick = function() {
     var nhap = document.getElementById("xuat10cau").value*1;
-    var soChan = "";
-    var soLe = "";
+    var ketqua = "";
     var i = 1;
     while( i <= nhap) {
         if(i % 2 == 0) {
-            soChan += "<div> Số chẵn : " + i + "</div>";
-            document.getElementById("thongbao3").style.backgroundColor= "red";
+            ketqua += "<div style = 'background-color:red; color:white'> Số chẵn : " + i + "</div>";
             i++;
         } else {
-            soLe += "<div> Số lẻ : " + i + "</div>";
-            document.getElementById("thongbao4").style.backgroundColor= "blue"
+            ketqua += "<div style = 'background-color:blue; color:white'> Số lẻ : " + i + "</div>";
             i++;
         }
     }
-  document.getElementById("thongbao3").innerHTML = soChan;
-  document.getElementById("thongbao4").innerHTML = soLe;
+  document.getElementById("thongbao3").innerHTML = ketqua;
 }
 
 /**
